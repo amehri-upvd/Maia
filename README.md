@@ -27,8 +27,7 @@ Follow these steps to build Maia from the sources:
 1. `git clone git@gitlab.onera.net:numerics/mesh/maia.git`
 2. `cd maia`
 3. `git submodule update --init` (needed for dependencies)
-4. `(cd external/paradigm && git submodule update --init extensions/paradigma)` (enable advanced features)
-5. Use `cmake` to configure, build and install. See the complete procedure here `doc/installation.rst`
+4. Use `cmake` to configure, build and install. See the complete procedure here `doc/installation.rst`
 
 Documentation can be build with `cmake` flag `-Dmaia_ENABLE_DOCUMENTATION=ON`
 
