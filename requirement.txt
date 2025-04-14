@@ -1,4 +1,0 @@
-cgns
-mpi4py
-numpy
-
