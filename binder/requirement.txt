@@ -1,0 +1,13 @@
+numpy==1.26.0
+setuptools
+wheel
+pytest
+pytest-html
+mpi4py==3.1.5
+cython==0.29.36
+h5py
+PyYAML
+sphinx
+sphinx-rtd-theme
+sphinx-tabs
+
