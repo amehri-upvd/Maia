@@ -1,8 +1,0 @@
-#!/bin/bash
-git clone https://github.com/onera/Maia
-cd Maia
-git submodule update --init
-mkdir build && cd build
-cmake ../maia
-make install
-
