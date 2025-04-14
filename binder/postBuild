@@ -6,12 +6,12 @@ export MAIA_PREFIX=$CONDA_PREFIX
 export PYTHON_VERSION=3.9 # or 3.10 or 3.11, depending on what's available
 
 # Clone le dépôt Maia
-git clone https://github.com/onera/Maia
+git https://github.com/onera/Maia.git
 
 cd Maia
 
 # Initialise et met à jour les sous-modules
-git submodule update --init --recursive
+git submodule update --init 
 
 # Crée et entre dans le répertoire de construction
 mkdir -p build
