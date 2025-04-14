@@ -18,16 +18,14 @@ mkdir -p build
 cd build
 
 # Configure CMake
-cmake -DCMAKE_INSTALL_PREFIX=$MAIA_PREFIX \
+cmake -DCMAKE_INSTALL_PREFIX=$CONDA_PREFIX \
       -DMAIA_ENABLE_PYTHON=ON \
-      -DPYTHON_EXECUTABLE=$CONDA_PREFIX/bin/python \
-      -DPYTHON_INCLUDE_DIR=/usr/include/python${PYTHON_VERSION} \
-      -DPYTHON_LIBRARY=/usr/lib/libpython${PYTHON_VERSION}.so \
+      -DPYTHON_EXECUTABLE=$(which python) \
       ..
 
 # Compile et installe
 make -j$(nproc) install
 
 # Configure PYTHONPATH
-export PYTHONPATH=$MAIA_PREFIX/lib/python${PYTHON_VERSION}/site-packages:$PYTHONPATH
+echo "export PYTHONPATH=$CONDA_PREFIX/lib:$PYTHONPATH" >> /home/jovyan/.bashrc
 
